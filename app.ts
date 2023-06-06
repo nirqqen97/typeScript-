@@ -75,4 +75,83 @@ db = {
 
 // ---------------------------------------------------------------non-js-types---------------------------------------------------------------------------------------------------
 
+//* any, Unknown, tuple, Enum, Union Type, literal type
+//? diff beetween Unknown and any, unknowk must be checked 
+//? example of tuple : fixed = [123,'asd'];
+//? example of UNion type : let union : number | string; 
+//? example of Literal type : let active : 'start' | 'end';
+
+
+
+//*                                                                 ANY
+// let some: any    //! no check buy ts 
+
+// some = 'asd';
+
+// some = {a: 'asd'}
+
+
+//*                                                                 UNKNOWN
+
+// let somethink : unknown
+
+// somethink = 'sad';
+
+
+// let srt : string ; 
+
+// if (typeof somethink  === "string") {   //! Lifeguard to check type of element 
+//     srt = somethink
+// }
+
+//*                                                                 TUPLE
+
+
+// let fixed: [string, number];
+
+// fixed = [123,'asd'];
+// fixed = ['asd', 123];
+
+// fixed.push('asd') //! you can add by push
+
+// //*                                                                 ENUM
+
+// enum Toggle {ENABLE,DISABLE}
+
+// const service = {
+//     status : Toggle.ENABLE
+// } 
+// //*                                                                 UNION TYPE
+
+// let union : number | string;
+
+// union = 213
+// union = '213215'
+
+
+// let active : 'start' | 'end'
+
+// active = '2'
+
+ //*                                                                 Literal TYPE
+const fruit : string[] = []
+
+const workWithArr = (arr : string[], val : string , action : "add" | "delete")  => { 
+    if (action === 'add') {
+        arr.push(val)
+    }
+    else { 
+       const int = arr.indexOf(val) 
+       arr.slice(int, 1)
+    }
+    return arr
+
+}
+
+workWithArr(fruit,'banana','add')
+workWithArr(fruit,'mango','add')
+
+workWithArr(fruit,'apple','add')
+console.log('fruit: ', fruit);
+
 
