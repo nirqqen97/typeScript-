@@ -133,25 +133,109 @@ db = {
 
 // active = '2'
 
- //*                                                                 Literal TYPE
-const fruit : string[] = []
+//  //*                                                                 Literal TYPE
+// const fruit : string[] = []
 
-const workWithArr = (arr : string[], val : string , action : "add" | "delete")  => { 
-    if (action === 'add') {
-        arr.push(val)
-    }
-    else { 
-       const int = arr.indexOf(val) 
-       arr.slice(int, 1)
-    }
-    return arr
+// const workWithArr = (arr : string[], val : string , action : "add" | "delete")  => { 
+//     if (action === 'add') {
+//         arr.push(val)
+//     }
+//     else { 
+//        const int = arr.indexOf(val) 
+//        arr.slice(int, 1)
+//     }
+//     return arr
 
+// }
+
+// workWithArr(fruit,'banana','add')
+// workWithArr(fruit,'mango','add')
+
+// workWithArr(fruit,'apple','add')
+// console.log('fruit: ', fruit);
+
+
+// //*                                                                 return from Func 
+
+// const pring = ( ) : void => {
+//     console.log('some log');
+    
+// }
+
+// const combine = (num : number, num2 : number ) : number => {
+//     console.log('some log');
+//     return num + num2
+// }
+
+
+    // const createPerson = (name : string)  => { 
+    //     return { 
+    //         name
+    //     }
+
+    // }
+
+
+    //*                                                                  Func type
+
+// let foo : () => void
+
+// foo = ( ) => { 
+//     console.log('sad');
+    
+// }
+
+// let test : (srt1 : string, str2 : string) => void
+
+    
+
+// const calc = (num1 : number, num2 : number, callback : (arg1 : number, arg2 : number ) => number) => { 
+
+//     return callback(num1, num2)
+
+// }
+
+
+//     //*                                                                  Custom type
+
+
+
+// type PersonTpye = { 
+//     name : string,
+//     age : number
+// }
+
+// const person1 : PersonTpye = { 
+//     name : 'asd',
+//     age : 213
+// }
+
+//     //*                                                                  CONSTRUCTOR (class)
+
+
+// class House { 
+//     street : string;
+
+//     constructor (n : string) { 
+//         this.street = n
+//     }
+//
+// }
+
+
+ //*                                                                  Methods (class)
+
+
+
+class House { 
+    street : string;
+
+    constructor (n : string) { 
+        this.street = n
+    }
+    showAddress ( ) : void { 
+        console.log(this.street + "Address");
+        
+    }
 }
-
-workWithArr(fruit,'banana','add')
-workWithArr(fruit,'mango','add')
-
-workWithArr(fruit,'apple','add')
-console.log('fruit: ', fruit);
-
-
+const house = new House("Lobonovskogo")
